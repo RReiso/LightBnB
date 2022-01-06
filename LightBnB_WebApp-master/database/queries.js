@@ -1,25 +1,4 @@
-const { Pool, CLient } = require("pg");
-const properties = require("./json/properties.json");
-const users = require("./json/users.json");
-
-const pool = new Pool({
-  user: "vagrant",
-  password: "123",
-  host: "localhost",
-  database: "vagrant",
-});
-
-pool
-  .connect()
-  .then(() => {
-    console.log("DATABASE STATUS: Connected :)");
-  })
-  .catch((e) => {
-    console.log(e);
-  });
-
-/// Users
-
+const pool = require("./index");
 /**
  * Get a single user from the database given their email.
  * @param {String} email The email of the user.
