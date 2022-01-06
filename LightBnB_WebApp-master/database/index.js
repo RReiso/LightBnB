@@ -4,7 +4,7 @@ const pool = new Pool({
   user: "vagrant",
   password: "123",
   host: "localhost",
-  database: "vagrant",
+  database: "lightbnb",
 });
 
 pool
